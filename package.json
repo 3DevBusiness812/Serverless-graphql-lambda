@@ -1,0 +1,28 @@
+{
+  "name": "serverless-graphql-lambda-simple",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-lambda": "^1.3.5",
+    "apollo-tracing": "^0.1.4",
+    "graphql": "^0.13.2",
+    "graphql-tools": "^2.23.1",
+    "request": "^2.85.0",
+    "request-promise-native": "^1.0.5"
+  },
+  "scripts": {
+    "deploy": "serverless deploy -v",
+    "rip": "serverless remove -v",
+    "test": "sls invoke test",
+    "test:watch": "nodemon -w functions/ -w test/ --exec 'npm test --'"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.2",
+    "serverless": "^1.26.1",
+    "serverless-mocha-plugin": "^1.7.0"
+  }
+}
